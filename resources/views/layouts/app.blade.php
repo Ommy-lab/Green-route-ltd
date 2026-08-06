@@ -6,7 +6,7 @@
     <meta name="description" content="@yield('meta_description', 'Cereal Transport provides reliable transportation of your cereals and cereal supply services across Tanzania, from pickup to delivery.')">
     <meta name="theme-color" content="#163C2C">
     <title>@yield('title', 'Green Route') | Cereal Transportation &amp; Supply</title>
-    <link rel="icon" type="image/png" href="{{ asset('favicongreen.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/favicongreen.png') }}">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
