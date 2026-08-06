@@ -75,7 +75,7 @@
                     </div>
 
                     <a href="https://wa.me/255788753820" target="_blank" rel="noopener"
-                       class="btn btn-whatsapp mt-2">
+                    class="btn btn-whatsapp mt-2">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 0.4rem; vertical-align: -3px;"><path d="M21 11.5a8.5 8.5 0 0 1-12.36 7.55L3 20l1.05-5.4A8.5 8.5 0 1 1 21 11.5z"></path></svg>
                         Chat With Us on WhatsApp
                     </a>
@@ -93,7 +93,7 @@
                             Please check the highlighted fields and try again.
                         </div>
 
-                        <form id="contact-form" novalidate>
+                        <form id="contact-form" action="https://formspree.io/f/mnpaqryn" method="POST" novalidate>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="full_name">Full Name</label>
@@ -124,6 +124,17 @@
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-brand">Send Message</button>
                                 </div>
+                                <div
+                                class="form-success-msg alert alert-success"
+                                style="display: none;"
+                                role="status"
+                                ></div>
+
+                                <div
+                                class="form-error-msg alert alert-danger"
+                                style="display: none;"
+                                role="alert"
+                                ></div>
                             </div>
                         </form>
                     </div>

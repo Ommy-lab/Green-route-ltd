@@ -34,7 +34,7 @@
 
                         <h3 class="h5 mt-4">Who this is for</h3>
                         <p>Farmers, traders, cooperatives, or any customer who needs their existing
-                           cereal stock transported reliably.</p>
+                        cereal stock transported reliably.</p>
 
                         <h3 class="h5 mt-4">Information you may need to provide</h3>
                         <ul class="service-meta-list">
@@ -45,7 +45,7 @@
                         </ul>
 
                         <a href="{{ Route::has('requests.create') ? route('requests.create') : url('/request-service') }}"
-                           class="btn btn-brand mt-2">Request This Service</a>
+                        class="btn btn-brand mt-2">Request This Service</a>
                     </div>
                     <div class="col-lg-4">
                         <div class="card-service-detail fade-in-up">
@@ -59,7 +59,7 @@
                             </div>
                             <h3>You own it, we move it</h3>
                             <p>Transportation only — no purchase involved. You stay in control of
-                               your cereals from start to finish.</p>
+                            your cereals from start to finish.</p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
 
                         <h3 class="h5 mt-4">Who this is for</h3>
                         <p>Customers who want quality cereals without arranging their own pickup or
-                           transport.</p>
+                        transport.</p>
 
                         <h3 class="h5 mt-4">Information you may need to provide</h3>
                         <ul class="service-meta-list">
@@ -90,7 +90,7 @@
                         </ul>
 
                         <a href="{{ Route::has('requests.create') ? route('requests.create') : url('/request-service') }}"
-                           class="btn btn-brand mt-2">Request This Service</a>
+                        class="btn btn-brand mt-2">Request This Service</a>
                     </div>
                     <div class="col-lg-4">
                         <div class="card-service-detail fade-in-up">
@@ -121,7 +121,7 @@
 
                         <h3 class="h5 mt-4">Who this is for</h3>
                         <p>Customers who prefer to collect their cereals themselves, or who already
-                           have their own transport arrangements.</p>
+                        have their own transport arrangements.</p>
 
                         <h3 class="h5 mt-4">Information you may need to provide</h3>
                         <ul class="service-meta-list">
@@ -131,7 +131,7 @@
                         </ul>
 
                         <a href="{{ Route::has('requests.create') ? route('requests.create') : url('/request-service') }}"
-                           class="btn btn-brand mt-2">Request This Service</a>
+                        class="btn btn-brand mt-2">Request This Service</a>
                     </div>
                     <div class="col-lg-4">
                         <div class="card-service-detail fade-in-up">
@@ -157,7 +157,7 @@
                 <h2>Not Sure Which Service Fits?</h2>
                 <p class="mb-4">Submit a request and describe what you need — we'll guide you from there.</p>
                 <a href="{{ Route::has('requests.create') ? route('requests.create') : url('/request-service') }}"
-                   class="btn btn-brand btn-lg">Request Service</a>
+                class="btn btn-brand btn-lg">Request Service</a>
             </div>
         </div>
     </section>

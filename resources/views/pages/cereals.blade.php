@@ -18,9 +18,9 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="hero-image-wrap">
-                        <img src="{{ asset('images/hero-cereals.jpg') }}"
-                             alt="Assorted cereals including maize, rice, beans and wheat"
-                             loading="lazy" width="800" height="600">
+                        <img src="{{ asset('images/zungu1.jpeg') }}"
+                            alt="Assorted cereals including maize, rice, beans and wheat"
+                            loading="lazy" width="800" height="600">
                     </div>
                 </div>
             </div>
@@ -36,8 +36,8 @@
             </div>
 
             {{-- Static placeholder cards for now.
-                 Later this block can become:
-                 @foreach ($cereals as $cereal) ... @endforeach --}}
+                Later this block can become:
+                @foreach ($cereals as $cereal) ... @endforeach --}}
             <div class="row g-4">
 
                 <div class="col-sm-6 col-lg-4">
@@ -52,7 +52,7 @@
                             <p class="mb-1"><strong>Unit:</strong> Per 100kg bag</p>
                             <p class="price mb-3">Contact for price</p>
                             <a href="{{ Route::has('requests.create') ? route('requests.create') : url('/request-service') }}"
-                               class="btn btn-outline-green w-100">Request This Cereal</a>
+                            class="btn btn-outline-green w-100">Request This Cereal</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                             <p class="mb-1"><strong>Unit:</strong> Per 50kg bag</p>
                             <p class="price mb-3">Contact for price</p>
                             <a href="{{ Route::has('requests.create') ? route('requests.create') : url('/request-service') }}"
-                               class="btn btn-outline-green w-100">Request This Cereal</a>
+                            class="btn btn-outline-green w-100">Request This Cereal</a>
                         </div>
                     </div>
                 </div>
@@ -83,11 +83,11 @@
                             <span class="badge-status badge-limited mb-2 align-self-start">Limited Stock</span>
                             <h3 class="h5">Beans</h3>
                             <p class="flex-grow-1">Assorted beans, sourced and stored under good
-                               conditions.</p>
+                            conditions.</p>
                             <p class="mb-1"><strong>Unit:</strong> Per 100kg bag</p>
                             <p class="price mb-3">Contact for price</p>
                             <a href="{{ Route::has('requests.create') ? route('requests.create') : url('/request-service') }}"
-                               class="btn btn-outline-green w-100">Request This Cereal</a>
+                            class="btn btn-outline-green w-100">Request This Cereal</a>
                         </div>
                     </div>
                 </div>

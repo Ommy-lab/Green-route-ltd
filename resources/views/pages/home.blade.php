@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image-wrap">
-                        <img src="{{ asset('images/cereal-transport.jpg') }}"
+                        <img src="{{ asset('images/zungu.jpeg') }}"
                             alt="A loaded truck transporting sacks of cereals on a road in Tanzania"
                             loading="lazy" width="800" height="600">
                     </div>

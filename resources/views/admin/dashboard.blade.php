@@ -10,9 +10,21 @@
         <div>
             <h2>Administrator Dashboard</h2>
             <p class="mb-1">
-                Welcome back, <strong>{{ auth()->user()->name ?? 'Administrator' }}</strong> —
-                here's what's happening with customer requests today.
-            </p>
+    Welcome back,
+    <strong>{{ auth()->user()->name ?? 'Administrator' }}</strong>
+
+    @if (auth()->user()->role === 'super_admin')
+        <span class="badge text-bg-dark ms-2">
+            Super Administrator
+        </span>
+    @else
+        <span class="badge text-bg-success ms-2">
+            Administrator
+        </span>
+    @endif
+
+    — here's what's happening with customer requests today.
+</p>
             <p class="admin-welcome-date">{{ now()->format('l, d F Y') }}</p>
         </div>
         <div class="admin-welcome-actions">

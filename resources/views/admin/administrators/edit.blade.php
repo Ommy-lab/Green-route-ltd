@@ -8,7 +8,7 @@
 
     <div
         class="d-flex flex-wrap justify-content-between
-               align-items-center gap-3 mb-4"
+            align-items-center gap-3 mb-4"
     >
         <div>
             <p class="text-success fw-semibold mb-1">

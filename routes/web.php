@@ -130,6 +130,44 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::resource('cereals', CerealController::class)
         ->except(['show']);
+
+Route::middleware(['super_admin'])->group(function () {
+    Route::get('/administrators', [
+        AdministratorController::class,
+        'index',
+    ])->name('administrators.index');
+
+    Route::get('/administrators/create', [
+        AdministratorController::class,
+        'create',
+    ])->name('administrators.create');
+
+    Route::post('/administrators', [
+        AdministratorController::class,
+        'store',
+    ])->name('administrators.store');
+
+    Route::get('/administrators/{administrator}/edit', [
+        AdministratorController::class,
+        'edit',
+    ])->name('administrators.edit');
+
+    Route::put('/administrators/{administrator}', [
+        AdministratorController::class,
+        'update',
+    ])->name('administrators.update');
+
+    Route::delete('/administrators/{administrator}', [
+        AdministratorController::class,
+        'destroy',
+    ])->name('administrators.destroy');
+
+    Route::get('/settings', [
+        SettingsController::class,
+        'index',
+    ])->name('settings.index');
+});
+
     });
 });
 

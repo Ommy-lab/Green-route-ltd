@@ -88,10 +88,16 @@
                             </td>
 
                             <td>
-                                <span class="badge text-bg-success">
-                                    Administrator
-                                </span>
-                            </td>
+    @if ($administrator->role === 'super_admin')
+        <span class="badge text-bg-dark">
+            Super Administrator
+        </span>
+    @else
+        <span class="badge text-bg-success">
+            Administrator
+        </span>
+    @endif
+</td>
 
                             <td>
                                 {{ $administrator->created_at->format('d M Y') }}

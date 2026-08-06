@@ -284,17 +284,17 @@ function initContactFormFeedback() {
 
     const successMsg = form.querySelector('.form-success-msg');
     const errorMsg = form.querySelector('.form-error-msg');
+    const submitButton = form.querySelector('[type="submit"]');
 
-    form.addEventListener('submit', (event) => {
-        // Only intercept when the form has no real backend action configured.
-        if (form.dataset.hasBackend === 'true') return;
-
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         if (!form.checkValidity()) {
             form.classList.add('was-validated');
 
             if (errorMsg) {
+                errorMsg.textContent =
+                    'Please check the highlighted fields and try again.';
                 errorMsg.style.display = 'block';
             }
 
@@ -305,16 +305,59 @@ function initContactFormFeedback() {
             return;
         }
 
+        form.classList.add('was-validated');
+
         if (errorMsg) {
             errorMsg.style.display = 'none';
         }
 
         if (successMsg) {
-            successMsg.style.display = 'block';
+            successMsg.style.display = 'none';
         }
 
-        form.reset();
-        form.classList.remove('was-validated');
+        const originalButtonText = submitButton?.textContent;
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+        }
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    Accept: 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error('Formspree rejected the submission.');
+            }
+
+            form.reset();
+            form.classList.remove('was-validated');
+
+            if (successMsg) {
+                successMsg.textContent =
+                    'Thank you. Your message has been sent successfully. Our team will respond as soon as possible.';
+                successMsg.style.display = 'block';
+            }
+        } catch (error) {
+            console.error('Contact form error:', error);
+
+            if (errorMsg) {
+                errorMsg.textContent =
+                    'Sorry, your message could not be sent right now. Please try again shortly.';
+                errorMsg.style.display = 'block';
+            }
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent =
+                    originalButtonText || 'Send Message';
+            }
+        }
     });
 }
 
