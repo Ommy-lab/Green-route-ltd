@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-lg-6 fade-in-up">
                     <div class="hero-image-wrap">
-                        <img src="{{ asset('images/cereal-storage.jpg') }}"
+                        <img src="{{ asset('images/zungu2.jpeg') }}"
                             alt="Sacks of cereals stored in a warehouse ready for transport"
                             loading="lazy" width="800" height="600">
                     </div>
